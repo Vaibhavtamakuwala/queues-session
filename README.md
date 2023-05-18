@@ -8,4 +8,8 @@ Clone the project in your system.
 - To install packages, run `npm install`
 - To run the project, use `npm start`
 
+Or 
+
+- You can just run `npm run serve`
+
 Here is the docummentation of [bull](https://optimalbits.github.io/bull/). You can refer it get deep dive in it.
