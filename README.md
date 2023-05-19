@@ -11,5 +11,6 @@ Clone the project in your system.
 Or 
 
 - You can just run `npm run serve`
+- Create a file named `.env` in your system and copy paste the **.env.example** in it with your configurations.
 
 Here is the docummentation of [bull](https://optimalbits.github.io/bull/). You can refer it get deep dive in it.

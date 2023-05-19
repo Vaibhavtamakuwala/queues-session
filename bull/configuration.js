@@ -6,7 +6,8 @@ const { REDIS } = require('../config');
 const sampleQueue = new bullQueue("firstQueue", {
     redis: {
         host: REDIS.HOST,
-        port: REDIS.PORT
+        port: REDIS.PORT,
+        password: REDIS.PASSWORD
     }
 });
 
@@ -15,7 +16,7 @@ console.info('Bull queue loaded...🎯');
 const handleFailedJobs = (job, err) => {
     if (job.attemptsMade >= job.opts.attempts) {
         console.info(`🤯 Job failures above threshold ${job.name}`, err);
-        job.remove();
+        // job.remove();
         return null;
     }
     console.info(`🤯 Job ${job.name} failed with ${err.message}. ${job.opts.attempts - job.attemptsMade} attempts left!`);
@@ -23,7 +24,7 @@ const handleFailedJobs = (job, err) => {
   
 const handleCompletedJobs = job => {
     console.info(`🌿 Job ${job.name} completed!`);
-    job.remove();
+    // job.remove();
 };
 
 const handleStalledJobs = job => {
