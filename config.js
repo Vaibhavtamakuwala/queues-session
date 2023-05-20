@@ -4,7 +4,7 @@ module.exports = {
     },
     REDIS: {
         HOST: process.env.REDIS_HOST || "127.0.0.1",
-        PORT: process.env.REDIS_PORT || 40251,
+        PORT: process.env.REDIS_PORT || 6379,
         PASSWORD: process.env.REDIS_PASSWORD || ""
     },
     START_EXE: process.env.START_EXE || "false"
